@@ -7,32 +7,27 @@ const navigate=useNavigate()
   return (
     <>
       {/* HERO SECTION */}
-    <section
-  className="h-[80vh] bg-cover bg-center bg-no-repeat relative"
+  <section
+  className="h-screen bg-cover bg-center flex items-center relative"
   style={{
-    backgroundImage:
-      "url('https://static.vecteezy.com/system/resources/thumbnails/069/635/515/small/a-professional-camera-on-a-tripod-with-a-blurred-background-of-an-event-space-with-spotlights-and-people-photo.jpg')",
+    backgroundImage: `url("https://static.vecteezy.com/system/resources/previews/024/696/222/original/ai-generated-ai-generative-illustration-of-adventure-explore-mountain-mountaineering-lifestyle-graphic-art-photo.jpg")`,
   }}
 >
-  {/* VERY LIGHT COLOR OVERLAY */}
-  <div className="absolute inset-0 bg-black/50"></div>
-
-  {/* CONTENT */}
-  <div className="relative z-10 h-full flex items-center justify-center text-center">
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-    >
-      <h1 className="text-5xl font-serif mb-4 text-white drop-shadow-xl">
-        Services
-      </h1>
-      <p className="italic text-lg text-white drop-shadow-md">
-        Photography Crafted With Passion & Precision
-      </p>
-    </motion.div>
-  </div>
-</section>
-
+  <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center"
+          >
+            <h1 className="text-7xl font-serif mb-4 text-teal-700 dark:text-indigo-200">
+              Service
+            </h1>
+            <p className="italic text-lg text-gray-700 dark:text-gray-300">
+              The Story Behind the Lens
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
 
       {/* INTRO */}
@@ -128,7 +123,7 @@ const services = [
       "Elegant and emotional wedding photography capturing every detail, from candid moments to timeless portraits.",
     note: "Full-day coverage • Pre-wedding shoots • High-end editing",
     img:
-      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=80",
+      "https://t3.ftcdn.net/jpg/11/97/52/00/360_F_1197520001_ymea6aXs1uUhBijweFiONUvpqjTULvzP.jpg",
   },
   {
     title: "Travel Photography",
@@ -144,7 +139,7 @@ const services = [
       "Natural and relaxed lifestyle photography that reflects real emotions and genuine connections.",
     note: "Family • Personal branding • Creative portraits",
     img:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?cs=srgb&dl=pexels-pixabay-237272.jpg&fm=jpg",
   },
 ]
 

@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Home() {
   const navigate = useNavigate();
+  const [showLearn, setShowLearn] = useState(false); // toggle for Learn Details
+
   return (
     <>
       {/* HERO SECTION */}
@@ -22,7 +25,7 @@ export default function Home() {
           </h1>
           <button className="border border-white text-white px-6 py-3 rounded-lg
             hover:bg-white hover:text-black transition-all duration-300 shadow-md"
-          onClick={() => navigate("/about")}>
+          onClick={() => navigate("/profile")}>
             View Portfolio
           </button>
         </motion.div>
@@ -91,9 +94,28 @@ export default function Home() {
           </p>
           <button className="mt-6 border border-teal-700 text-teal-700 dark:border-indigo-300 dark:text-indigo-200 px-6 py-3 rounded-lg
             hover:bg-teal-700 hover:text-white dark:hover:bg-indigo-300 dark:hover:text-white transition-all duration-300 shadow-md"
+            onClick={() => setShowLearn(!showLearn)}
           >
             Learn More
           </button>
+
+          {/* LEARN DETAILS SECTION */}
+          {showLearn && (
+            <div className="mt-8 p-6 bg-white dark:bg-darkCard rounded-lg shadow-lg transition-all duration-500">
+              <h3 className="text-2xl font-serif text-teal-700 dark:text-indigo-200 mb-4">
+                Learn More About Raman
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-2">
+                I specialize in wedding, portrait, lifestyle, and travel photography.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300 mb-2">
+                Using professional equipment and unique artistic vision, I transform ordinary moments into extraordinary memories.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                Every shoot is crafted to capture authentic emotions and timeless stories.
+              </p>
+            </div>
+          )}
         </div>
 
         <img
@@ -131,16 +153,13 @@ export default function Home() {
 
       {/* CTA */}
       <section
-  className="py-20 text-center bg-cover bg-center relative h-[70vh]"
-  style={{
-    backgroundImage:
-      "url('https://asset.fujifilm.com/www/us/files/styles/1120x400/public/2020-08/5197d9ed172a928c16214c0abf0e0484/FUJIFILM-USA-digital-cameras-banner-X-series.jpg?itok=vADq7VUq')",
-  }}
->
- 
-  
-
-</section>
+        className="py-20 text-center bg-cover bg-center relative h-[70vh]"
+        style={{
+          backgroundImage:
+            "url('https://asset.fujifilm.com/www/us/files/styles/1120x400/public/2020-08/5197d9ed172a928c16214c0abf0e0484/FUJIFILM-USA-digital-cameras-banner-X-series.jpg?itok=vADq7VUq')",
+        }}
+      >
+      </section>
     </>
   );
 }
@@ -166,7 +185,3 @@ const mountainImages = [
   "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=80",
   "https://img.freepik.com/premium-photo/close-up-clock-camera_1048944-23873243.jpg?semt=ais_hybrid&w=740&q=80",
 ];
-
-
-
-//  Ready to Book Your Session?

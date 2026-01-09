@@ -26,6 +26,7 @@ export default function Footer() {
             <li><Link className="hover:text-teal-600 dark:hover:text-indigo-300 transition" to="/">Home</Link></li>
             <li><Link className="hover:text-teal-600 dark:hover:text-indigo-300 transition" to="/portfolio">Portfolio</Link></li>
             <li><Link className="hover:text-teal-600 dark:hover:text-indigo-300 transition" to="/about">About</Link></li>
+            <li><Link className="hover:text-teal-600 dark:hover:text-indigo-300 transition" to="/profile">Profile</Link></li>
             <li><Link className="hover:text-teal-600 dark:hover:text-indigo-300 transition" to="/services">Services</Link></li>
             <li><Link className="hover:text-teal-600 dark:hover:text-indigo-300 transition" to="/contact">Contact</Link></li>
           </ul>

@@ -9,6 +9,8 @@ import Contact from "./pages/Contact";
 
 import Footer from "./components/Footer";
 import Navbar from "./components/ Navbar";
+import ScrollToTop from "./components/ScrollToTop";
+import Profile from "./pages/Profile";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,6 +32,7 @@ export default function App() {
     <div className={darkMode ? "dark" : "light"}>
       <div className="bg-lightBg dark:bg-darkBg text-black dark:text-white transition-colors duration-500 min-h-screen">
         <BrowserRouter>
+        <ScrollToTop/>
           <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -37,6 +40,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/profile" element={<Profile/>}/>
           </Routes>
           <Footer />
         </BrowserRouter>

@@ -88,7 +88,7 @@ const images = [
   {
     title: "Wedding Moments",
     category: "Wedding Photography",
-    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=80",
+    img: "https://perspectives.co.nz/wp-content/uploads/2024/06/Auckland-Wedding-Photographer-004-scaled.jpg",
   },
   {
     title: "Golden Hour",
@@ -103,7 +103,7 @@ const images = [
   {
     title: "Lifestyle Portrait",
     category: "Lifestyle",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
+    img: "https://img.freepik.com/free-photo/mythical-video-game-inspired-landscape-with-lake-night_23-2150974356.jpg?semt=ais_hybrid&w=740&q=80",
   },
   {
     title: "Nature & Light",

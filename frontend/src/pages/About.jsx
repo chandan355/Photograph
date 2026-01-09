@@ -5,7 +5,7 @@ export default function About() {
     <>
       {/* HERO SECTION */}
     <section
-        className="h-screen bg-cover bg-center flex items-center relative"
+         className="h-screen bg-cover bg-center flex items-center relative"
         style={{
           backgroundImage: `url("https://media.licdn.com/dms/image/v2/D5612AQFbIyYHodCo0A/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1693928931564?e=2147483647&v=beta&t=LH39omi5MaeDBWRlUWPGfES7QzeglnB4cYNPTGFDCfQ")`,
         }}

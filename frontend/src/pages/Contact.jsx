@@ -44,31 +44,27 @@ export default function Contact() {
   return (
     <>
       {/* HERO SECTION */}
-     <section
-  className="h-[80vh] bg-cover bg-center bg-no-repeat relative"
+  <section
+  className="h-screen bg-cover bg-center flex items-center relative"
   style={{
-    backgroundImage:
-      "url('https://img.freepik.com/premium-photo/photographer-hd-images-photography-hd-image_1257223-128600.jpg')",
+    backgroundImage: `url("https://t4.ftcdn.net/jpg/08/54/93/19/360_F_854931975_H9MWN2CW06i6Kwpjl12yqILILhUGOGQC.jpg")`,
   }}
 >
-  {/* VERY LIGHT COLOR OVERLAY */}
-  <div className="absolute inset-70 bg-black/60"></div>
-  <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+  <div className="absolute inset-10 bg-black/10 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="text-5xl font-serif mb-4 text-teal-700 dark:text-indigo-200">
-              Contact Me
+            <h1 className="text-7xl font-serif mb-4 text-teal-700 dark:text-indigo-200">
+              Service
             </h1>
             <p className="italic text-lg text-gray-700 dark:text-gray-300">
-              Let’s Capture Your Story Together
+              The Story Behind the Lens
             </p>
           </motion.div>
         </div>
       </section>
-
       {/* CONTACT FORM + INFO */}
      <section className="px-20 py-24 bg-gradient-to-b from-teal-50 to-sky-100 dark:from-darkBg/60 dark:to-darkCard/40">
       <div className="grid grid-cols-2 gap-16">

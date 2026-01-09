@@ -32,6 +32,11 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             </Link>
           </li>
           <li>
+            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/profile">
+              Profile
+            </Link>
+          </li>
+          <li>
             <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/services">
               Services
             </Link>
