@@ -1,40 +1,56 @@
 import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom"
 
-
 export default function Services() {
-const navigate=useNavigate()
+  const navigate = useNavigate()
+
   return (
     <>
       {/* HERO SECTION */}
-  <section
-  className="h-screen bg-cover bg-center flex items-center relative"
-  style={{
-    backgroundImage: `url("https://static.vecteezy.com/system/resources/previews/024/696/222/original/ai-generated-ai-generative-illustration-of-adventure-explore-mountain-mountaineering-lifestyle-graphic-art-photo.jpg")`,
-  }}
->
-  <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+      <section
+        className="h-screen bg-cover bg-center flex items-center relative"
+        style={{
+          backgroundImage: `url("https://static.vecteezy.com/system/resources/previews/024/696/222/original/ai-generated-ai-generative-illustration-of-adventure-explore-mountain-mountaineering-lifestyle-graphic-art-photo.jpg")`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black/10 flex items-center justify-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="text-7xl font-serif mb-4 text-teal-700 dark:text-indigo-200">
+            <h1 className="
+              text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+              font-serif mb-4
+              text-teal-700 dark:text-indigo-200
+            ">
               Service
             </h1>
-            <p className="italic text-lg text-gray-700 dark:text-gray-300">
+
+            <p className="
+              italic
+              text-base sm:text-lg
+              text-gray-700 dark:text-gray-300
+            ">
               The Story Behind the Lens
             </p>
           </motion.div>
         </div>
       </section>
 
-
       {/* INTRO */}
-      <section className="px-20 py-20 text-center max-w-3xl mx-auto bg-gradient-to-b from-teal-50 to-sky-100 dark:from-darkBg/60 dark:to-darkCard/40">
-        <h2 className="text-3xl font-serif mb-4 text-teal-700 dark:text-indigo-200">
+      <section className="
+        px-4 sm:px-10 md:px-20
+        py-16 md:py-20
+        text-center
+        max-w-3xl mx-auto
+        bg-gradient-to-b from-teal-50 to-sky-100
+        dark:from-darkBg/60 dark:to-darkCard/40
+      ">
+        <h2 className="text-2xl md:text-3xl font-serif mb-4 text-teal-700 dark:text-indigo-200">
           What I Offer
         </h2>
+
         <p className="text-gray-700 dark:text-gray-300">
           Each photography service is thoughtfully designed to capture real
           emotions, authentic moments, and timeless memories — tailored to
@@ -43,8 +59,17 @@ const navigate=useNavigate()
       </section>
 
       {/* SERVICES GRID */}
-      <section className="px-20 pb-24 bg-gradient-to-b from-teal-50 to-sky-100 dark:from-darkBg/60 dark:to-darkCard/40">
-        <div className="grid grid-cols-3 gap-10">
+      <section className="
+        px-4 sm:px-10 md:px-20
+        pb-20 md:pb-24
+        bg-gradient-to-b from-teal-50 to-sky-100
+        dark:from-darkBg/60 dark:to-darkCard/40
+      ">
+        <div className="
+          grid
+          grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+          gap-8 md:gap-10
+        ">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -54,16 +79,18 @@ const navigate=useNavigate()
               <img
                 src={service.img}
                 alt={service.title}
-                className="w-full h-[280px] object-cover"
+                className="w-full h-56 sm:h-64 md:h-[280px] object-cover"
               />
 
               <div className="p-6 bg-white dark:bg-darkCard">
-                <h3 className="text-2xl font-serif mb-2 text-teal-700 dark:text-indigo-200">
+                <h3 className="text-xl md:text-2xl font-serif mb-2 text-teal-700 dark:text-indigo-200">
                   {service.title}
                 </h3>
+
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   {service.desc}
                 </p>
+
                 <p className="text-sm text-gray-500 dark:text-gray-400 italic">
                   {service.note}
                 </p>
@@ -74,12 +101,22 @@ const navigate=useNavigate()
       </section>
 
       {/* PROCESS SECTION */}
-      <section className="bg-gradient-to-b from-teal-50 to-sky-100 dark:from-darkCard/50 dark:to-darkCard/30 py-20 px-20">
-        <h2 className="text-3xl font-serif text-center mb-12 text-teal-700 dark:text-indigo-200">
+      <section className="
+        bg-gradient-to-b from-teal-50 to-sky-100
+        dark:from-darkCard/50 dark:to-darkCard/30
+        py-16 md:py-20
+        px-4 sm:px-10 md:px-20
+      ">
+        <h2 className="text-2xl md:text-3xl font-serif text-center mb-10 md:mb-12 text-teal-700 dark:text-indigo-200">
           My Working Process
         </h2>
 
-        <div className="grid grid-cols-4 gap-8 text-center">
+        <div className="
+          grid
+          grid-cols-2 sm:grid-cols-4
+          gap-6 md:gap-8
+          text-center
+        ">
           <Process step="01" title="Consultation" />
           <Process step="02" title="Planning" />
           <Process step="03" title="Photography" />
@@ -89,24 +126,37 @@ const navigate=useNavigate()
 
       {/* CTA */}
       <section
-
-       className="py-10 text-center bg-cover bg-center relative h-[70vh]"
-  style={{
-    backgroundImage:
-      "url('https://www.hdwallpapers.in/download/photographer_sunset_4k-HD.jpg')",
-  }}
->
-     
-        <div className="py-20">
-          <h2 className="text-3xl font-serif mb-4 text-teal-700 dark:text-indigo-200">
+        className="
+          py-10
+          text-center
+          bg-cover bg-center relative
+          h-[60vh] md:h-[70vh]
+        "
+        style={{
+          backgroundImage:
+            "url('https://www.hdwallpapers.in/download/photographer_sunset_4k-HD.jpg')",
+        }}
+      >
+        <div className="py-16 md:py-20 px-4">
+          <h2 className="text-2xl md:text-3xl font-serif mb-4 text-teal-700 dark:text-indigo-200">
             Ready to Capture Your Story?
           </h2>
+
           <p className="mb-6 italic text-gray-700 dark:text-gray-300">
             Let’s create something truly unforgettable
           </p>
-          <button className="border border-teal-700 text-teal-700 dark:border-indigo-300 dark:text-indigo-200 px-8 py-3 rounded-lg
-            hover:bg-teal-700 hover:text-white dark:hover:bg-indigo-300 dark:hover:text-white transition-all duration-300 shadow-md"
-          onClick={() => navigate("/contact")}>
+
+          <button
+            className="
+              border border-teal-700 text-teal-700
+              dark:border-indigo-300 dark:text-indigo-200
+              px-8 py-3 rounded-lg
+              hover:bg-teal-700 hover:text-white
+              dark:hover:bg-indigo-300 dark:hover:text-white
+              transition-all duration-300 shadow-md
+            "
+            onClick={() => navigate("/contact")}
+          >
             Book a Session
           </button>
         </div>
@@ -146,10 +196,12 @@ const services = [
 function Process({ step, title }) {
   return (
     <div>
-      <span className="text-4xl font-serif block mb-2 text-teal-700 dark:text-indigo-200">{step}</span>
-      <h3 className="font-serif text-lg text-gray-700 dark:text-gray-300">{title}</h3>
+      <span className="text-3xl md:text-4xl font-serif block mb-2 text-teal-700 dark:text-indigo-200">
+        {step}
+      </span>
+      <h3 className="font-serif text-base md:text-lg text-gray-700 dark:text-gray-300">
+        {title}
+      </h3>
     </div>
   )
 }
-
-

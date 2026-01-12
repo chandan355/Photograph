@@ -5,20 +5,20 @@ export default function Footer() {
     <footer className="bg-gradient-to-b from-lightCard to-white dark:from-darkCard dark:to-darkBg 
     text-black dark:text-white py-16 transition-colors duration-500">
       
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
 
         {/* BRAND */}
-        <div>
+        <div className="text-center sm:text-left">
           <h2 className="text-3xl font-serif tracking-[0.3em] mb-4 text-teal-700 dark:text-indigo-200">
             RAMAN
           </h2>
-          <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-300 max-w-xs">
+          <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-300 max-w-xs mx-auto sm:mx-0">
             Capturing moments, telling stories through timeless photography.
           </p>
         </div>
 
         {/* LINKS */}
-        <div>
+        <div className="text-center sm:text-left">
           <h3 className="uppercase text-xs tracking-widest mb-5 text-gray-600 dark:text-gray-400">
             Quick Links
           </h3>
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         {/* CONTACT */}
-        <div>
+        <div className="text-center sm:text-left">
           <h3 className="uppercase text-xs tracking-widest mb-5 text-gray-600 dark:text-gray-400">
             Contact
           </h3>
