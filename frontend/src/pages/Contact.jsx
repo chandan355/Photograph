@@ -14,7 +14,7 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     let newErrors = {};
@@ -31,6 +31,7 @@ export default function Contact() {
 
     if (Object.keys(newErrors).length === 0) {
       alert("✅ Message Sent Successfully!");
+      setFormData({ name: "", email: "", message: "" });
     }
   };
 
