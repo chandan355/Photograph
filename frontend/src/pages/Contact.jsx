@@ -113,7 +113,6 @@ export default function Contact() {
 
               {/* BUTTON */}
               <button
-                type="submit"
                 className="w-full bg-gradient-to-r from-teal-700 to-sky-600 
                 dark:from-indigo-400 dark:to-indigo-300 text-white dark:text-black 
                 px-6 py-4 rounded-lg font-serif text-lg 
