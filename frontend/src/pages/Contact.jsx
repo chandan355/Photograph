@@ -14,42 +14,7 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-  e.preventDefault();
 
-  let newErrors = {};
-
-  if (!formData.name.trim()) newErrors.name = "Name is required";
-  if (!formData.email.trim()) {
-    newErrors.email = "Email is required";
-  } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-    newErrors.email = "Enter a valid email";
-  }
-  if (!formData.message.trim()) newErrors.message = "Message is required";
-
-  setErrors(newErrors);
-
-  if (Object.keys(newErrors).length === 0) {
-    try {
-      const res = await fetch("http://localhost:5000/api/contacts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await res.json();
-
-      if (result.success) {
-        alert("✅ Message Sent!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        alert("❌ " + result.message);
-      }
-    } catch (error) {
-      alert("❌ Server not running");
-    }
-  }
-};
 
 
   return (

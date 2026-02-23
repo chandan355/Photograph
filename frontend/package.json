@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://chandan355.github.io/Photograph",
+ 
 
   "dependencies": {
     "@mui/icons-material": "^7.3.6",

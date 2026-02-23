@@ -6,7 +6,7 @@ import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-
+import './App.css'
 import Footer from "./components/Footer";
 import Navbar from "./components/ Navbar";
 import ScrollToTop from "./components/ScrollToTop";
