@@ -56,7 +56,7 @@ export default function Contact() {
               Send Me a Message
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form  className="space-y-5">
               {/* NAME */}
               <div>
                 <input
