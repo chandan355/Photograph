@@ -14,6 +14,19 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleMail = () => {
+  const subject = "New Contact Message";
+
+  const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Message: ${formData.message}
+  `;
+
+  window.location.href = `mailto:chandansharma13432@gmail.com?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+};
 
 
 
@@ -52,73 +65,23 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             className="bg-white dark:bg-darkCard rounded-xl p-6 sm:p-10 shadow-2xl border border-teal-100 dark:border-indigo-400/30"
           >
-            <h2 className="text-2xl sm:text-3xl font-serif mb-6 text-teal-700 dark:text-indigo-200">
-              Send Me a Message
-            </h2>
-
+          <div className="flex justify-center">
+  <h2 className="text-2xl sm:text-3xl font-serif mb-6 text-teal-700 dark:text-indigo-200">
+    Send Me a Message
+  </h2>
+</div>
             <form  className="space-y-5">
-              {/* NAME */}
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  className={`w-full p-4 rounded-lg border 
-                  ${errors.name ? "border-red-500" : "border-gray-300"}
-                  focus:outline-none focus:ring-2 focus:ring-teal-400
-                  dark:focus:ring-indigo-300 transition bg-gradient-to-r from-teal-50 to-white dark:from-darkBg dark:to-darkCard`}
-                />
-                {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                )}
-              </div>
+          
 
-              {/* EMAIL */}
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Your Email"
-                  className={`w-full p-4 rounded-lg border 
-                  ${errors.email ? "border-red-500" : "border-gray-300"}
-                  focus:outline-none focus:ring-2 focus:ring-teal-400
-                  dark:focus:ring-indigo-300 transition bg-gradient-to-r from-sky-50 to-white dark:from-darkBg dark:to-darkCard`}
-                />
-                {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                )}
-              </div>
-
-              {/* MESSAGE */}
-              <div>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Your Message"
-                  className={`w-full p-4 rounded-lg border 
-                  ${errors.message ? "border-red-500" : "border-gray-300"}
-                  focus:outline-none focus:ring-2 focus:ring-teal-400
-                  dark:focus:ring-indigo-300 transition h-36 sm:h-40 resize-none 
-                  bg-gradient-to-r from-indigo-50 to-white dark:from-darkBg dark:to-darkCard`}
-                />
-                {errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-                )}
-              </div>
 
               {/* BUTTON */}
-              <button
+              <button onClick={handleMail}
                 className="w-full bg-gradient-to-r from-teal-700 to-sky-600 
                 dark:from-indigo-400 dark:to-indigo-300 text-white dark:text-black 
                 px-6 py-4 rounded-lg font-serif text-lg 
-                hover:scale-105 transition-all duration-300 shadow-lg"
+                hover:scale-105 transition-all duration-300 shadow-lg mt-20"
               >
-                Send Message
+               Contect Us
               </button>
             </form>
           </motion.div>

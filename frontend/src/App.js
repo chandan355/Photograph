@@ -11,8 +11,11 @@ import Footer from "./components/Footer";
 import Navbar from "./components/ Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import Profile from "./pages/Profile";
+import State from "./state";
 
 export default function App() {
+
+
   const [darkMode, setDarkMode] = useState(false);
 
   // Load dark mode preference from localStorage

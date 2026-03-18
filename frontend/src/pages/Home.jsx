@@ -37,7 +37,7 @@ export default function Home() {
               className="border border-white text-white px-6 py-3 rounded-lg
               hover:bg-white hover:text-black transition-all duration-300 shadow-md"
               onClick={() => navigate("/profile")}
-            >
+            > 
               View Portfolio
             </motion.button>
           </motion.div>
