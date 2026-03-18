@@ -37,11 +37,27 @@ export default function Footer() {
           <h3 className="uppercase text-xs tracking-widest mb-5 text-gray-600 dark:text-gray-400">
             Contact
           </h3>
-          <p className="text-gray-500 dark:text-gray-300 text-sm leading-7">
-            📧 ramanphotography@gmail.com <br />
-            📞 +91 98765 43210 <br />
-            📍 India
-          </p>
+       <p className="text-gray-500 dark:text-gray-300 text-sm leading-7">
+  📧{" "}
+  <a
+    href="mailto:chandansharma13532@gmail.com"
+    className="hover:text-teal-600 dark:hover:text-indigo-300"
+  >
+   chandansharma13532@gmail.com
+  </a>
+  <br />
+
+  📞{" "}
+  <a
+    href="tel:+6399622397"
+    className="hover:text-teal-600 dark:hover:text-indigo-300"
+  >
+    +91 63996 22397
+  </a>
+  <br />
+
+  📍 India
+</p>
         </div>
       </div>
 

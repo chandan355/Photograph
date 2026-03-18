@@ -23,7 +23,7 @@ Email: ${formData.email}
 Message: ${formData.message}
   `;
 
-  window.location.href = `mailto:chandansharma13432@gmail.com?subject=${encodeURIComponent(
+  window.location.href = `mailto:chandansharma13532@gmail.com?subject=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(body)}`;
 };
