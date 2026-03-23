@@ -68,14 +68,38 @@ export default function Portfolio() {
       </section>
 
       {/* CTA SECTION */}
-      <section
-        className="py-20 text-center bg-cover bg-center relative h-[50vh] sm:h-[70vh]"
-        style={{
-          backgroundImage:
-            "url('https://www.smartphotoeditors.com/blog/wp-content/uploads/2020/05/a-complete-guide-to-professional-event-photography.png')",
-        }}
-      >
-      </section>
+<section
+  className="py-20 px-6 text-center flex flex-col justify-center items-center min-h-[60vh] 
+  bg-gradient-to-b from-teal-50 to-sky-100"
+>
+  <h1 className="text-4xl sm:text-5xl font-bold text-teal-700 mb-6">
+    Chandan Photography
+  </h1>
+
+  <div className="max-w-2xl text-gray-700 space-y-2 text-sm sm:text-base leading-relaxed">
+    <p>Capturing moments that last forever 📸</p>
+    <p>Every frame tells a unique story</p>
+    <p>Light, emotion, and timeless beauty</p>
+    <p>Where memories become art</p>
+    <p>Creating visuals that speak without words</p>
+    <p>Moments you can feel, not just see</p>
+    <p>Turning real life into lasting memories</p>
+    <p>Every detail matters in every shot</p>
+    <p>Passion behind every click</p>
+    <p>Photography is more than just pictures</p>
+    <p>It’s about capturing emotions</p>
+    <p>From weddings to wild landscapes</p>
+    <p>Every story deserves to be told</p>
+    <p>Natural light, natural moments</p>
+    <p>Creative vision in every frame</p>
+    <p>Elegance in simplicity</p>
+    <p>Moments that never fade</p>
+    <p>Your memories, beautifully preserved</p>
+    <p>Art that lives forever</p>
+    <p>Let your story shine through images</p>
+  </div>
+</section>
+
     </>
   );
 }

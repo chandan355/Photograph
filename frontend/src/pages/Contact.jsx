@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FaPhoneAlt } from "react-icons/fa";
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,7 +10,6 @@ export default function Contact() {
     message: "",
   });
 
-  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,7 +29,9 @@ Message: ${formData.message}
   )}&body=${encodeURIComponent(body)}`;
 };
 
-
+const handleCall = () => {
+  window.location.href = "tel:+916399622397"; // apna number daalo
+};
 
   return (
     <>
@@ -67,7 +70,7 @@ Message: ${formData.message}
           >
           <div className="flex justify-center">
   <h2 className="text-2xl sm:text-3xl font-serif mb-6 text-teal-700 dark:text-indigo-200">
-    Send Me a Message
+    Send  Message
   </h2>
 </div>
             <form  className="space-y-5">
@@ -75,14 +78,27 @@ Message: ${formData.message}
 
 
               {/* BUTTON */}
-              <button onClick={handleMail}
-                className="w-full bg-gradient-to-r from-teal-700 to-sky-600 
-                dark:from-indigo-400 dark:to-indigo-300 text-white dark:text-black 
-                px-6 py-4 rounded-lg font-serif text-lg 
-                hover:scale-105 transition-all duration-300 shadow-lg mt-20"
-              >
-               Contect Us
-              </button>
+          
+              <div className="space-y-4 mt-20">
+  
+  {/* Call Button */}
+  <button
+    onClick={handleCall}
+    className="w-full flex items-center justify-center gap-3 
+    bg-green-500 text-white px-6 py-4 rounded-lg"
+  >
+    <FaPhoneAlt /> Call Us
+  </button>
+
+  {/* Mail Button */}
+  <button
+    onClick={handleMail}
+    className="w-full bg-teal-600 text-white px-6 py-4 rounded-lg"
+  >
+    Send Message
+  </button>
+
+</div>
             </form>
           </motion.div>
 
