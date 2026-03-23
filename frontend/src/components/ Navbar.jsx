@@ -18,13 +18,16 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         </Link>
 
         {/* HAMBURGER BUTTON (MOBILE) */}
-        <button
-          className="md:hidden p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? "✖️" : "☰"}
-        </button>
-
+    <button
+  className="md:hidden p-2 rounded-md border 
+  border-gray-300 dark:border-gray-600 
+  text-black dark:text-white
+  hover:bg-gray-100 dark:hover:bg-gray-700 
+  transition-colors duration-300"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {menuOpen ? "✖️" : "☰"}
+</button>
         {/* MENU */}
         <ul className={`flex flex-col md:flex-row md:space-x-8 items-center text-sm uppercase tracking-wide
           md:static absolute top-full left-0 w-full md:w-auto
@@ -32,19 +35,19 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           ${menuOpen ? "max-h-[500px] py-4 md:py-0" : "max-h-0 md:max-h-full"}`}
         >
           <li className="px-6 md:px-0 py-2 md:py-0">
-            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/">Home</Link>
+            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/"  onClick={() => setMenuOpen(false)}>Home</Link>
           </li>
           <li className="px-6 md:px-0 py-2 md:py-0">
-            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/portfolio">Portfolio</Link>
+            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/portfolio"  onClick={() => setMenuOpen(false)}>Portfolio</Link>
           </li>
           <li className="px-6 md:px-0 py-2 md:py-0">
-            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/about">About</Link>
+            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/about"  onClick={() => setMenuOpen(false)}>About</Link>
           </li>
           <li className="px-6 md:px-0 py-2 md:py-0">
-            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/profile">Profile</Link>
+            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/profile" onClick={() => setMenuOpen(false)}>Profile</Link>
           </li>
           <li className="px-6 md:px-0 py-2 md:py-0">
-            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/services">Services</Link>
+            <Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300" to="/services"  onClick={() => setMenuOpen(false)}>Services</Link>
           </li>
           <li className="px-6 md:px-0 py-2 md:py-0">
             <Link
